@@ -1,0 +1,14 @@
+use stage from #public.uix;
+
+// set different endpoints for different stages
+endpoint: stage {
+    prod:       @+deploytest
+},
+
+location: stage {
+    prod:       @+unyt-private-1
+},
+
+domain: stage {
+    prod:       "deploytest.unyt.org"
+}

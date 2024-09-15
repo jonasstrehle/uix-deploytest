@@ -1,2 +1,14 @@
 name: "uix-deploytest",
-description: "A simple UIX app project"
+description: "A simple UIX app project";
+
+plugin git_deploy (
+    // Deploy this app in the 'prod' stage
+    // when a push to the main branch occurs
+    // The 'MY_SECRET_TOKEN' GitHub secret is passed as an
+    // environment variables to the UIX app
+    prod: {
+        branch: 'main',
+        on: 'push',
+        secrets: ['MY_SECRET_TOKEN']
+    }
+)

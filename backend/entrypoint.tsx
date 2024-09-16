@@ -5,10 +5,7 @@
  */
 import { provideRedirect } from "uix/html/entrypoint-providers.tsx"
 
-export default {
-	// show backend (hybrid) rendered page on /backend
-	'/backend': import("../common/page.tsx"), 
-	
-	// redirect / to /backend
-	'/': provideRedirect("/backend")
-}
+export default <div>
+	<h1>Hello world</h1>
+	<input type="text" placeholder="My Text Input"/>
+</div>
